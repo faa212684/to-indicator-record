@@ -12,13 +12,15 @@ npm install @strong-roots-capital/to-indicator-record
 
 ``` typescript
 import toIndicatorRecord from '@strong-roots-capital/to-indicator-record'
-// TODO: describe usage
+import randomRecordStream from '@strong-roots-capital/random-record-stream'
+
+const context = getContext()
+randomRecordStream(start.toDate(), end.toDate())
+    .pipe(toIndicatorRecord(context))
+    // and Records become IndicatorRecords
 ```
 
 ## Related
 
-TODO
-
-## Acknowledgments
-
-TODO
+- [timeseries-record](https://github.com/strong-roots-capital/timeseries-record)
+- [indicator-record](https://github.com/strong-roots-capital/indicator-record)
