@@ -1,6 +1,6 @@
 {
   "name": "@strong-roots-capital/to-indicator-record",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Transform records to indicator-records",
   "main": "dist/to-indicator-record.js",
   "types": "dist/to-indicator-record.d.ts",
