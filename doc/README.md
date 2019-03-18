@@ -45,7 +45,7 @@ TODO
 
 ▸ **toIndicatorRecord**(context: *`RecordContext`*): `Transform`
 
-*Defined in [to-indicator-record.ts:19](https://github.com/strong-roots-capital/to-indicator-record/blob/e55747b/src/to-indicator-record.ts#L19)*
+*Defined in [to-indicator-record.ts:19](https://github.com/strong-roots-capital/to-indicator-record/blob/35eb99e/src/to-indicator-record.ts#L19)*
 
 Return a new Transform stream to promote a stream of Record objects into IndicatorRecord objects.
 
