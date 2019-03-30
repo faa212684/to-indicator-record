@@ -5,7 +5,9 @@
   "main": "dist/to-indicator-record.js",
   "types": "dist/to-indicator-record.d.ts",
   "scripts": {
-    "install": "tsc",
+    "prepublishOnly": "npm run compile",
+    "compile": "npm run clean && tsc",
+    "clean": "rm -rf  dist",
     "ava": "ava -s -v",
     "ava:fail-fast": "ava -s -v --fail-fast",
     "watch:ava": "nodemon -e 'ts json' -x 'npm run ava || true'",
@@ -18,6 +20,9 @@
     "push-with-tags": "git push origin master && git push origin --tags",
     "push-and-publish": "npm run push-with-tags && npm publish"
   },
+  "files": [
+    "dist/"
+  ],
   "husky": {
     "hooks": {
       "pre-push": "npm run typedoc && git add doc && (git commit -m 'Update documentation' || true)"
@@ -42,13 +47,12 @@
   "dependencies": {
     "@strong-roots-capital/indicator-record": "^1.0.1",
     "@strong-roots-capital/record-context": "^1.0.0",
-    "@types/node": "^10.12.18",
     "@types/readable-stream": "^2.3.1",
     "readable-stream": "^3.2.0",
-    "timeseries-record": "^1.0.0",
-    "typescript": "^3.2.2"
+    "timeseries-record": "^1.0.0"
   },
   "devDependencies": {
+    "@types/node": "^10.12.18",
     "@strong-roots-capital/random-record-stream": "^1.0.0",
     "ava": "^1.0.0",
     "codecov": "^3.1.0",
@@ -58,7 +62,8 @@
     "tap-nyc": "^1.0.3",
     "ts-node": "^7.0.1",
     "typedoc": "^0.13.0",
-    "typedoc-plugin-markdown": "^1.1.20"
+    "typedoc-plugin-markdown": "^1.1.20",
+    "typescript": "^3.2.2"
   },
   "ava": {
     "compileEnhancements": false,
